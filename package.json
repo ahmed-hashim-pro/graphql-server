@@ -1,0 +1,49 @@
+{
+  "name": "my-webpack-project",
+  "version": "1.0.0",
+  "description": "My webpack project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index -e ts,graphql",
+    "compile": "tsc",
+    "start": "npm run compile && node ./dist/index.js",
+    "start3": "concurrently \"nodemon --ignore ./server/generated/ -e graphql --exec 'yarn gql2flow'\" \"NODE_ENV=development nodemon --ignore ./server/generated/ -e js --delay 0.9 ./index.dev.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "start2": "node dist/server.js",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch",
+    "serve": "webpack serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.3.1",
+    "concurrently": "^7.6.0",
+    "graphql": "^16.6.0",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@webpack-cli/generators": "^3.0.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.8.0",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "start-server-webpack-plugin": "^2.2.5",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0",
+    "webpack-node-externals": "^3.0.0",
+    "workbox-webpack-plugin": "^6.5.4"
+  }
+}
