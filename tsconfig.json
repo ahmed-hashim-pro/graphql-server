@@ -3,7 +3,7 @@
     "allowSyntheticDefaultImports": true,
     "module": "esnext",
     "target": "es2020",
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "allowJs": true,
 
 
@@ -12,7 +12,10 @@
     "lib": ["es2020"],
 
     "esModuleInterop": true,
-    "types": ["node"]
+    "types": ["node"],
+    "sourceMap": true,
+    "strict": false,
+
   },
   "files": ["src/index.ts"]
 }

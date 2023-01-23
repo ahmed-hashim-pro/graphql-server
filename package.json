@@ -1,30 +1,33 @@
 {
-  "name": "my-webpack-project",
+  "name": "graphql_api",
   "version": "1.0.0",
-  "description": "My webpack project",
+  "description": "Simple GraphQl Api Server",
+  "homepage": "https://geohashim.com",
   "main": "index.js",
-  "type": "module",
+  "type":"module",
   "scripts": {
-    "dev": "nodemon index -e ts,graphql",
-    "compile": "tsc",
+    "dev": "nodemon --exec node --loader ts-node/esm src/index.ts",
+    "compile": "tsc ",
+    "compile_copy": "tsc -p . && ncp src dist",
     "start": "npm run compile && node ./dist/index.js",
-    "start3": "concurrently \"nodemon --ignore ./server/generated/ -e graphql --exec 'yarn gql2flow'\" \"NODE_ENV=development nodemon --ignore ./server/generated/ -e js --delay 0.9 ./index.dev.js\"",
+
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode=production --node-env=production",
-    "build:dev": "webpack --mode=development",
-    "start2": "node dist/server.js",
-    "build:prod": "webpack --mode=production --node-env=production",
-    "watch": "webpack --watch",
-    "serve": "webpack serve"
+    "build webpack": "webpack --mode=production --node-env=production",
+    "build-webpack:dev": "webpack --mode=development",
+    "build-webpack:prod": "webpack --mode=production --node-env=production",
+    "watch-webpack": "webpack --watch",
+    "serve-webpack": "webpack serve"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ahmed Hashim",
   "license": "ISC",
   "dependencies": {
     "@apollo/server": "^4.3.1",
     "concurrently": "^7.6.0",
     "graphql": "^16.6.0",
-    "nodemon": "^2.0.20"
+    "ncp": "^2.0.0",
+    "nodemon": "^2.0.20",
+    "ts-node-dev": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",

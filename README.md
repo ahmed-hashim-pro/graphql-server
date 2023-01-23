@@ -2,14 +2,15 @@
 
 This project has been created for using as an example, you can now run
 
-```
-npm run build
-```
-
-or
 
 ```
-yarn build
+npm run dev
+```
+to start the live server
+
+```
+npm run start
 ```
 
-to bundle your application
+
+to bundle and start your application
