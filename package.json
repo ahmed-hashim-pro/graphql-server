@@ -10,13 +10,7 @@
     "compile": "tsc ",
     "compile_copy": "tsc -p . && ncp src dist",
     "start": "npm run compile && node ./dist/index.js",
-
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build webpack": "webpack --mode=production --node-env=production",
-    "build-webpack:dev": "webpack --mode=development",
-    "build-webpack:prod": "webpack --mode=production --node-env=production",
-    "watch-webpack": "webpack --watch",
-    "serve-webpack": "webpack serve"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Ahmed Hashim",
