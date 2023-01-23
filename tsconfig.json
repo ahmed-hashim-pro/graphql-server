@@ -4,18 +4,13 @@
     "module": "esnext",
     "target": "es2020",
     "moduleResolution": "nodenext",
-    "allowJs": true,
-
-
     "rootDirs": ["src"],
     "outDir": "dist",
     "lib": ["es2020"],
-
     "esModuleInterop": true,
     "types": ["node"],
     "sourceMap": true,
     "strict": false,
-
   },
   "files": ["src/index.ts"]
 }
