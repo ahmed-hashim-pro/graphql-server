@@ -30,6 +30,7 @@
     "dotenv": "^16.0.3",
     "graphql": "^16.6.0",
     "mongoose": "^6.8.4",
+    "nanoid": "^4.0.0",
     "ncp": "^2.0.0",
     "nodemon": "^2.0.20",
     "ts-node-dev": "^2.0.0"
